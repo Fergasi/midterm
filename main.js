@@ -251,10 +251,9 @@ You can assume that every number in the array will be unique
 function twoSmallest(array){
     let answer = [];
     let smallest = array[0];
-    let secondSmallest = array[0];
 
     if (array.length < 2){
-        return 'undefined'
+        return undefined
     }
 
     for (let numbers of array){
@@ -264,6 +263,8 @@ function twoSmallest(array){
     }
 
     array.splice((array.indexOf(smallest)),1);
+
+    let secondSmallest = array[0];
 
     for (let numbers of array){
         if (numbers < secondSmallest){
@@ -278,7 +279,7 @@ function twoSmallest(array){
 
 /* console.logs to test */
 console.log("twoSmallest");
-console.log(twoSmallest([65, 31, 23, 10, 12, 7, 19, 41, 541, 234, 12]));
+console.log(twoSmallest([-1,0,1,2,3]));
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
